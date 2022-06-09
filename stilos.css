@@ -1,0 +1,88 @@
+.contenedor{
+    height: 100vh;
+    grid-gap: 0.2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header header"
+        "seccion1 seccion1 seccion1 seccion1"
+        "seccion3 seccion4 seccion5 seccion5"
+        "seccion7 seccion8 seccion5 seccion5"
+        "footer1 footer1 footer1 footer1";
+
+}
+.header{
+    grid-area: header;
+    background-color: rgb(87, 10, 171);
+    text-align: center;
+}
+.seccion1{
+    grid-area: seccion1;
+    background-color: rgb(115, 160, 193);
+    text-align: center;
+}
+.seccion3{
+    grid-area: seccion3;
+    background-color: rgb(51, 255, 15);
+    text-align: center;
+}
+.seccion4{
+    grid-area: seccion4;
+    background-color: rgb(217, 255, 10);
+    text-align: center;
+}
+.seccion5{
+    grid-area: seccion5;
+    background-color: rgb(87, 47, 100);
+    text-align: center;
+}
+.seccion7{
+    grid-area: seccion7;
+    background-color: rgb(51, 255, 49);
+    text-align: center;
+}
+.seccion8{
+    grid-area: seccion8;
+    background-color: rgb(217, 255, 25);
+    text-align: center;
+}
+.footer1{
+    grid-area: footer1;
+    background-color: rgb(226, 245, 12);
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) { 
+    .contenedor{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "header header "
+        "seccion1 seccion1"
+        "seccion3 seccion4"
+        "seccion7 seccion8"
+        "seccion5 seccion5"
+        "seccion5 seccion5"
+        "footer1 footer1"; 
+    }   
+}
+
+@media screen and (max-width: 780px) { 
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 1.5fr 1fr 1fr;
+        grid-template-areas:
+        "header"
+        "seccion1"
+        "seccion3"
+        "seccion4"
+        "seccion7"
+        "seccion8"
+        "seccion5"
+        "seccion5"
+        "seccion5"
+        "seccion5"
+        "footer1"; 
+    }   
+}
